@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+   <header>
+       <h1>Vamos dividir pedaços</h1>
+   </header>
+   <section>
+        <div>
+            <p>Coloque quantas pizzas tem: <input type="number" name="tem" id="txtt"></p>
+            <p>Coloque quantos pedaços terá uma pizza inteira: <input type="number" name="tem" id="txtps"></p>
+            <p>Quantos pessoas irão comer: <input type="number" name="comer" id="txtpe"></p>
+
+            <input type="button" value="Contar" onclick="contar()">
+        </div>
+        <div id="res">
+           Preparando contagem... 
+        </div>
+   </section>
+   <footer>
+       <p>&copy; Andressa Nicolau</p>
+   </footer>
+
+   <script src="script-pizza.js"></script>
+</body>
+</html>

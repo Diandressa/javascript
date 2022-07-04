@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão</title>
+    <style>
+        body {
+            background-color: rgb(77, 77, 167);
+            color: white;
+            font: normal 16px Arial;
+        }
+        h1 {
+            color: rgb(255, 216, 45);
+        }
+
+        a:link, a:visited {
+            color: rgb(255, 216, 45);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tratamento de Dados</h1>
+
+    <h2>Conversões</h2>
+
+    <pre><code>
+        window.prompt('Qual é seu nome?')
+    </code></pre>
+
+    <p>Jogamos o resultado da execução desse comando dentro de uma variável:</p>
+
+    <pre><code>
+        var n1 = window.prompt('Digite um número: ')
+        var n2 = window.prompt('Digite outro número: ')
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s)
+    </code></pre>
+
+    <p>Acima, o sinal de soma + terá o efeito de concantenação, não irá somar um número mais o outro e sim unir um número ao outro. Por exemplo se colocarmos 6 e depois 2 no final irá aparecer no meu alerta 62.</p>
+    <p>O + no JavaScript serve tanto para adição quanto para concatenação, precisamos definir o tipo de valor que temos para o javascript entender qual das duas eles deve fazer, se será soma ou concatenação.</p>
+    <p>
+        //(number + number) para adição <br>
+        //(string + string) para concatenação
+    </p>
+    <p>Porém o prompt tem como característica retornar o valor sempre como uma string, mesmo que eu digite um número ele trata como uma string. Precisamos converter o n1 e n2 de string para número. Para essa conversão temos várias maneiras, podemos usar qualquer umas das seguintes:</p>
+
+    <img src="conversao.png" alt="conversão">
+
+    <p>O primeiro é para converter para um número inteiro, o segundo para um número real (com vírgula). Importante que as letras em maiúsculo e minúsculo são exatamente da forma mostrada (Case sensitive).</p>
+    <p>Eu posso converter os valores direto do prompt, antes de somar:</p>
+    <pre><code>
+        var n1 = Number.parseInt(window.prompt('Digite um número: ')) //conversão
+        var n2 = Number.parseInt(window.prompt('Digite outro número: ')) //conversão
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s)
+    </code></pre>
+    <p>Precisávamos saber se iamos usar um número inteiro ou um número real. Essa era uma forma antiga de converter, agora só precisamos usar Number(n), porém não elimina as de cima (podemos usar quando precisamos definir só número inteiros ou só reais por exemplo):</p>
+
+    <img src="conversao2.png" alt="conversão atualmente">
+
+    <p>Podemos converter um número em uma string também com String(n)-> o n é o que eu quero converter, o S é maiúsculo:</p>
+
+    <img src="conversao-string.png" alt="conversão de número pra string">
+
+    <pre><code>
+        var n1 = Number(window.prompt('Digite um número: ')) //conversão
+        var n2 = Number(window.prompt('Digite outro número: ')) //conversão
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + String(s))
+    </code></pre>
+
+    <h2>Formatando Strings</h2>
+    <p>Antigamento era usado a concatenação pra unir váriavéis, exemplo:</p>
+    <img src="concatenacao.png" alt="concatenação">
+    <p>Atualmente têm uma forma mais prática de fazer isso usando template string com `texto ${variavel}`:</p>
+
+    <img src="template-string.png" alt="template-string" width="500px">
+
+    <p>Agora:</p>
+    <img src="placeholder.png" alt="placeholder">
+    <p>Chamamos o $ de placeholder.</p>
+
+    <p>Sabendo disso nosso script pode ser escrito dessa forma:</p>
+
+    <p>Antes:</p>
+    <pre><code>
+        var n1 = Number(window.prompt('Digite um número: ')) //conversão
+        var n2 = Number(window.prompt('Digite outro número: ')) //conversão
+        var s = n1 + n2
+        window.alert('A soma entre ' + n1 + ' e ' + n2 + ' é igual a ' + s)
+    </code></pre>
+
+    <p>Agora:</p>
+    <pre><code>
+        var n1 = Number(window.prompt('Digite um número: ')) //conversão
+        var n2 = Number(window.prompt('Digite outro número: ')) //conversão
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+    </code></pre>
+
+    <p>Temos outras formatações de string:</p>
+
+    <img src="outras-formatacoes.png" alt="outros" width="500px">
+    <br>
+    <a href="ex004.html" target="_blank">ex004</a>
+
+    <script>
+        var n1 = Number(window.prompt('Digite um número: ')) //conversão
+        var n2 = Number(window.prompt('Digite outro número: ')) //conversão
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+    </script>
+</body>
+</html>

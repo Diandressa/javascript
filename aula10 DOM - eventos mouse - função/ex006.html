@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <!-- Estilo -->
+    <style>
+        div#area {
+            background: pink;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <div id="area">
+        Interaja...
+    </div>
+    <p>Eventos é tudo aquilo que pode acontencer com qualquer elemento, no nosso caso é a div acima.</p>
+    <p>Podem acontecer divervas coisas, o mais comum são eventos de mouse. Como o <strong>mouseenter</strong> (significa que o mouse entrou na div), o <strong>mousemove</strong>(movimentos com o mouse dentro da div), <strong>mousedown</strong>(quando eu clico e seguro com o botão do mouse), <strong>moseup</strong>(quando eu solto o botão do mouse dispara esse evento), <strong>click</strong>(apertar e soltar o botão), <strong>mouseout</strong>(quando movo o mouse pra fora da div).</p>
+    <img src="eventos.png" alt="" width="300px">
+    <p>Existem outros eventos, veja no google: <a href="https://www.google.com/search?q=javascript+dom+event+list&oq=javascript+dom+event+list&aqs=chrome..69i57j0j0i22i30l5j69i60.4860j0j7&sourceid=chrome&ie=UTF-8">javascript dom event list</a> ou veja no site da mozilla <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">aqui</a></p>
+    <p>Para dispara um evento precisamos saber o que é uma função em javascript.</p>
+    <h2>Função</h2>
+    <p>Uma função é um conjunto de códigos/linhas que serão executadas só quando o evento ocorrer. Por exemplo esse código só vai ocorrer quando eu clicar dentro da minha div.</p>
+    <p>Pra executar várias linhas, somente quando o evento ocorrer, precisamos coloca-las em um bloco (conjunto de várias linhas).</p>
+    <img src="bloco.png" alt="">
+    <p>Depois precisamos nomear esse bloco como uma <strong>function</strong>. No javascript existe a chamada <strong>função anônima</strong>(uma função sem nome). Porem para que o método funcione precisamos dar nomes para essas funções e geralmente os nomes das funções são ações que podemos realizar. Dentro dos parêntes colocamos os parâmetros.</p>
+    <img src="funcao.png" alt="" width="300px">
+    <p>Os eventos podem ser configurados na parte HTML ou direto no javascript. Para dispara uma ação colocamos <strong>on</strong> antes do nome da ação, que no caso abaixo é click. O onclick vai chamar o nome da ação que queremos, por isso digitamos a ação que queremos logo em seguida.</p>
+    <img src="onclick.png" alt="">
+    <p>Significa que quando eu clicar em cima da div ele irá dispara o clicar.</p>
+    <p>Depois para linkar isso ao javascript usamos o function com o mesmo nome, o function vai dizer o que irá acontecer quando eu clicar:</p>
+    <img src="onclick-script.png" alt="">
+    <p>Criamos uma variável a, para selecionar a div que criamos. Depois usamos o innerText para mudar o texto dentro dessa div.</p>
+    <p>Adicionando outro elemento, quando o mouse entrar:</p>
+    <img src="onmouseenter.png" alt="">
+    <p>Aí criamos outra function, podemos ou criamos a mesma variável a, pois não conseguimos acessar o contéudo de outro função. Ou colocar a variavel fora das duas funções, essa último não é indicado, mas foi usado para exemplificar. Colocamos o entrar e o sair tb.</p>
+    <img src="onmouseout.png" alt=""><br>
+    <img src="script-entrar-sair-mouse.png" alt="">
+    <p>Podemos também formatar o estilo:</p>
+    <img src="estilo-div.png" alt="">
+    <p>Para fazer isso sem alterar o HTML, somente com javascript usamos o <strong>addEventListener()</strong>. Fazemos isso em vez de criar onclick, onmouseenter, etc. Criamos um addEventListener() para cada evento:</p>
+    <img src="addE.png" alt="">
+    <h2>Erros Javascript</h2>
+    <p>Para descobrir onde está dando erro no meu código é só ir no DevTools e veja no Console. Ele diz em quem linha ocorreu o erro (ex: at ex006.html:26 - erro na linha 26)</p>
+
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', enter)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'Ai, vc clicou!'
+            a.style.background = 'yellow'
+        }
+
+        function enter(){
+            a.innerText = "Clica vai!"
+        }
+
+        function sair(){
+            a.innerText = "Não tire, clique!"
+            a.style.background = 'red'
+            a.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

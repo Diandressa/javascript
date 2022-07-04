@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(77, 77, 167);
+            color: white;
+            font: normal 16px Arial;
+        }
+        h1 {
+            color: rgb(255, 216, 45);
+        }
+
+        a:visited {
+            color: rgb(255, 216, 45);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+
+    <pre><code>
+        window.prompt('Qual é seu nome?')
+    </code></pre>
+
+    <p>Jogamos o resultado da execução desse comando dentro de uma variável:</p>
+
+    <pre><code>
+        var nome = window.prompt('Qual é seu nome?')
+        window.alert('É um grande prazer em te conhecer '+ nome + '!') //concatenação
+    </code></pre>
+
+    <p>Lê-se a variável nome recebe o resultado do prompt que vai aparecer na janela. Em baixo podemos resgatar o nome (o valor da variável) com um alert. Colocamos a variável que queremos resgatar fora das aspas e para unir essas informações usamos o + (o sinal de mais nesse caso tem a função de <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings"><abbr title="Concatenando strings — Concatenar é uma palavra chique da programação que significa -colocar junto-.">concatenação</abbr></a>).</p>
+
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        window.alert('É um grande prazer em te conhecer '+ nome + '!') //concatenação
+    </script>
+</body>
+</html>

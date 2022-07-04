@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções</h1>
+    <p>Funções são tarefas, rotinas, funcionalidades. Toda função precisa ter uma chamada (uma ordem - no exemplo abaixo é a mãe), essa chamada pode ser automatizada (evento). Precisamos ter um parâmetro (uma entrada -  no exemplo temos dois parâmetro: o dinheiro e o que a mãe queria). A ação é outro processo, o processo realizado para realizar aquela função. No fim temos o retorno (no exemplo é quando entregamos o produto desejado).Obs.: Nem toda função usa parâmetros, nem toda função tem retorno.</p>
+    <img src="conceito.png" alt="">
+    <p>Conceito técnico:</p>
+    <img src="conceito-tecnico.png" alt="">
+    <p>Para disparar um evento de uma função usamos alguns parâmetros do html, como o onclick (diz qual a função que irá ser disparada depois que eu fizer aquele evento - no caso o de clicar).</p>
+    <img src="funcao- onclick.png" alt="">
+    <p>Dentro dos parênteses podemos adicionar parâmetros, que irão ser processados pela ação e podem ter um resultado. A ação não executa por padrão, precisamos ter uma chamada, que no exemplo é ação(5)</p>
+    <img src="chamada.png" alt="">
+    <p>Quando eu executar o código ele vai pular a parte da função e irá executar o comando de baixo ação(5).</p>
+    <img src="parametro.png" alt="">
+    <p>Esse último comando vai pra cima, como parâmetro. Então o parâmetro passa a valer 5 nesse exemplo. No final podemos ter o retorno de um resultado. Que será enviado para a chamada.</p>
+    <img src="estrutura.png" alt="">
+    <p>A chamada pode ser um onclick (no caso do HTML DOM) ou pode ser disparada pelo lado de fora.</p>
+    <p>No comando ação(5), o 5 também é um parâmetro, que chamamos de parâmetro real em cima é chamado parâmetro formal.</p>
+    <p>No exemplo, queremos verificar se um número é par ou ímpar. Dentro da função parimp queremos verificar se o número (n) dentro do parâmetro é par ou ímpar. Para verificar se ele é par ou ímpar é só verificar se aquele número é divisível por 2. Pra isso usamos o % (resto). Então se o n divido por 2 dar resto 0 ele é par, retorno par, se não retorno ímpar.</p>
+    <img src="exem-parouimpar.png" alt="">
+    <p>Obs.: eu posso ter mais de um retorn dentro de uma function.</p>
+    <p>Se eu deixar o código como está acima, ele não vai funcionar ao ser executado pois não temos a chamada ainda. Para fazer a chamada criamos uma variável (let res) que receberá a função parimp mais o valor que quero checar (11 é meu parâmetro agora):</p>
+    <img src="exem-parouimpar2.png" alt="">
+    <p>Quando fazer o retorn ímpar essa palavra (ímpar) irá ser o valor da minha variável res.</p>
+    <img src="exem-parouimpar3.png" alt="">
+    <p>Eu tenho duas possibilidades de retorno, mas nesse caso terei como retorn o 'ímpar'.</p>
+    <p>Aplicação desse exemplo:</p>
+    <img src="exem-aplicação.png" alt="">
+    <p>Caso não quera a variável e deseja só mostrar o resultado na tela podes usar:</p>
+    <img src="exem-aplicação2.png" alt="">
+    <p>Podemos ter mais de um parâmetro:</p>
+    <img src="soma.png" alt="">
+    <p>Se por acaso não mandarmos dois números como parâmetros o retorno dará NaN (indefinido). NaN siginifica 'Not-A-Number (não é um número)'.</p>
+    <img src="nan.png" alt="">
+    <p>Porém ao colocar o n1 ou n2 igual à zero significa que se o n1 ou n2 não for passados eles valeram 0 (se for passado algum valor ele considera o valor passado). Então no exemplo acima ele considera um dos n igual a zero e a soma será 0 + 2, resultando em 2.</p>
+    <img src="soma-n0.png" alt="">
+    <p>Também podemos jogar uma função dentro de uma variável.</p>
+    <img src="var-func.png" alt="">
+    <p>Podemos também calcular o fatorial de um número. 5 farotial é igual a 5 x 4 x 3 x 2 x 1. </p>
+    <img src="exem-fatorial.png" alt="">
+    <p>Podemos fazer o fatorial de uma outra maneira, a maneir recursiva. Uma recurssão acontece quando uma função chama ela mesma.</p>
+    <img src="recursividade.png" alt="">
+    <img src="recursividade2.png" alt="">
+    <img src="funções-recur2.png" alt="">
+    <p>O curso básico vai até aqui, mas fica a dica: estude mais sofre funções!</p>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+
+    <!-- Estilo -->
+    <style>
+        span {
+            background-color: crimson;
+            color: rgb(233, 233, 233);
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores</h1>
+    <p>Existem algumas famílias de operadores, nessa aula veremos os três últimos:</p>
+    <img src="familias2.png" alt="fami">
+
+    <h2>Operadores Relacionais</h2>
+    <p>O resultado de expressões que tenham operadores relacionais será sempre um valor boleano, ou seja, verdadeiro ou falso.</p>
+    <img src="relacionais.png" alt="relacionais" width="200px">
+
+    <p>No javascript somente 1 símbolo de igual (=) significa recebe, já o sinal == significa de fato o igual/equivale.</p>
+    <p>O != (exclamação igual) significa não igual, ou seja, diferente.</p>
+    <p>Aplicação no nodejs:</p>
+    <img src="alguns-testes-rel.png" alt="alguns-testes-rel">
+
+    <p>Exemplos (tem significado em texto):</p>
+    <img src="exemplos-rel.png" alt="exemplos" width="500px"> 
+
+    <h3>Operadores relacionais de identidade</h3>
+    
+    <p>Temos os operadores relacionais que chamamos de <span>operadores de identidade</span> também conhecido como operador de igualdade restrita. Usamos o === e testamos se um dado é <strong>idêntico</strong>ao outro, ou seja, se são do mesmo valor e do mesmo tipo. Lê-se 5 idêntico a 5.</p>
+    <img src="identicos.png" alt="identicos" width="300px">
+
+    <p>O sinal de igualdade não testa o tipo, por isso 5=='5' é verdadeiro.</p>
+    <p>Aplicação no nodejs:</p>
+    <img src="testes-rel2.png" alt="">
+
+    <p>O !== é chamado de desigual restrito.</p>
+
+    <h2>Operadores Lógicos</h2>
+
+    <img src="logicos.png" alt="" width="300px">
+
+    <p>A barra vertical se chama pipe, uma disjunção são nosso <strong>'ou'</strong> lógico (em texto). Uma conjunção é um <strong>'e'</strong> lógico.</p>
+
+    <h3>Negação</h3>
+    <img src="negação.png" alt="" width="300px">
+    <p>O ! (não/negação) é tratado como operador unário, ou seja só tem um operando que é true ou false. No exemplo uma coisa que não é verdadeira (uma negação ao dado verdade) é uma coisa falsa.Uma coisa que !(NÃO) é false é verdadeira.</p>
+
+    <h3>Conjunção (e)</h3>
+    <p>Uma conjunção é um operador binário, tenho dois operandos, um de cada lado.</p>
+    <img src="conjunção.png" alt="" width="300px">
+
+    <p>No primeiro exemplo acima podemos interpretar como se tenho uma caneta vermelha e tenho uma caneta azul eu fico satisfeito (é uma verdade). Só é verdade com as duas preposições forem verdades, se uma dela é mentira logo o resultado é falso.</p>
+
+    <h3>Disjunção (ou)</h3>
+    <p>Também é um operador binário.</p>
+    <img src="disjuncao.png" alt="" width="300px">
+
+    <p>Basta que um seja verdadeiro pra que tenho um resultado verdadeiro. Pois quero um ou outro, e se um dele é verdade então minha lógica é verdade também.</p>
+
+    <h3>Testes no nodejs</h3>
+
+    <img src="teste1.png" alt="">
+
+    <p>Quando eu tenho operadores relacionais e lógicos na mesma expressão a ordem que é feito é: primeiro todos os operadores aritméricos (%), depois os relacionais (>, ==) e por último os operadores lógicos (&&).</p>
+    <p>Ordem:</p>
+    <ul>
+        <li>1º - operadores aritméricos (+,-,%,*,**);</li>
+        <li>2º - operadores relacionais(>, >==, ==,!=, ===)</li>
+        <li>3º - operadores lógicos(!,&&,||).</li>
+    </ul>
+
+    <img src="teste-ordem.png" alt="">
+
+    <p>No exemplo acima primeiro fazemos o b % 2 que dá 0 (verdade) e depois o a > b que é mentira (falso). Então temos false && true. Essa preposição é uma conjunção false, pois false e true dá false como vimos acima.</p>
+    <p>Se por acaso tivermos numa mesma expressão um && (e), um || (ou) e um !(não) a ordem de execução será primeiro o ! (não), depois o && (e) e por último o || (ou):</p>
+    <ul>
+        <li>1º - ! (não);</li>
+        <li>2º - && (e);</li>
+        <li>3º - || (ou).</li>
+    </ul>
+
+    <h2>Exemplos de expressões (texto)</h2>
+
+    <img src="exemplos-expressoes.png" alt="" width="500px">
+
+    <h2>Ordem - dentro de uma expressão</h2>
+    <img src="ordem2.png" alt="" width="300px">
+    <p>Os operadores relacionais (>, >=, ==) não tem ordem de precedência entre si, quem aparecer primeiro vai ser feito primeiro. Já os logicos tem, como vimos acima.</p>
+
+    <h2>Operador ternário</h2>
+
+    <img src="ternario.png" alt="">
+
+    <p>Ele se chama ternário pois tem 3 partes, unindo três operandos:</p>
+    <img src="ternario2.png" alt="" width="500px">
+    <p>Diz o que irá acontecer se nosso teste for verdadeiro e o que irá acontecer se for falso.</p>
+    <img src="ternario-exemp.png" alt="" width="500px">
+    <p>No exemplo acima o aluno será aprovado ou reprovado dependendo da média dele.</p>
+
+    <p>No nodejs:</p>
+    <img src="terna-exem-node.png" alt="">
+    <p>Como a média dele foi 5.5 e é menor que 7, ele foi reprovado.</p>
+    <img src="terna-exem-node2.png" alt="">
+    <p>No exemplo a seguir se a primeiro preposição for verdade ele aplica o 5 e se for falso será o 9. No caso será o resto de 8/2 que é 0 e 0 é == 0 (igual). Como é verdade meu res terá o valor 5:</p>
+    <img src="terna-exem-node3.png" alt="">
+    <p>Outro exemplo:</p>
+    <img src="terna-exem-node4.png" alt="">
+</body>
+</html>

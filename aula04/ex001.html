@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(97, 97, 172);
+            color: white;
+            font: normal 16px Arial;
+        }
+        h1 {
+            color: rgb(255, 216, 45);
+        }
+
+        a:visited {
+            color: rgb(255, 216, 45);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+    <p>O script é localizado no final do conteúdo no body, pois ele irá carregar em cima do conteúdo já existente. O conteúdo tem que ser renderizado para ser aplicado depois o script.</p>
+    <p>Alertas (podemos omitir o window):</p>
+    <pre><code>
+        window.alert('Minha primeira mensagem!')
+        window.confirm('Está gostando de JS?')
+    </code></pre>
+
+    <p>Imagens de exemplos:</p>
+    <img src="exemplo.png" alt="1" width="500px">
+    <img src="exemplo2.png" alt="2" width="500px">
+    <img src="null.png" alt="null" width="500px">
+    <p>Null é nenhum carro na vaga.</p>
+
+    <p>No computador esse terreno chamamos de memória onde podemos colocar dados. Dentre da memória temos espaços delimitados para receber esses valores (assim como as vagas no exemplo) e esses espaços são as <mark>variáveis</mark>.</p>
+
+    <img src="variaveis.png" alt="variaveis" width="500px">
+    <p>Quando a variável recebe um valor chamamos isso de atribuição. <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators">"Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à direita. O operador de atribuição básico é o igual (=), que atribui o valor do operando à direita ao operando à esquerda."</a></p>
+    <img src="obs.png" alt="obs" width="500px">
+
+    <p>Existem também variáveis de tamanhos diferentes para caber dados de tamanhos diferentes (assim como o exemplo as vagas de caminhão ou moto).</p>
+
+    <p>Uma cadeia de caracteres são chamadas strings (fragmentos). <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String">Strings são úteis para guardar dados que podem ser representados em forma de texto.</a> Usamos esse caracter entre aspas simples ou duplas. No exemplo abaixo as strings são os s1, s2, s3...</p>
+
+    <img src="string.png" alt="string" width="500px">
+
+    <p>Podemos delimitar uma string em javascript de três formas, com: aspas simples (apóstrofo), duplas e a crase. Têm diferença usar uma ou outra. Veremos mais a frente.</p>
+
+    <p>O nome de cada variável chamamos de <mark>identificador</mark>. Existem algumas regras para nomeação de identificadores (não podemos colocar qualquer nome).</p>
+
+    <img src="regras-identificadores.png" alt="regras" width="250px">
+    <p>Palavras reservadas como: alert, var ...</p>
+
+    <p>Dicas para escolher nomes de identificadores:</p>
+
+    <img src="dicas.png" alt="dicas" width="250px">
+
+    <h2>Node.js</h2>
+
+    <p>Podemos criar uma variável no node.js com o var (ou o let) para testar.</p>
+
+    <img src="node-js.png" alt="node">
+
+    <p>A variável é nome e recebe o texto "Andressa". Quando queremos resgatar a variável colocamos o nome dela (nome) e ela nós retorna o valor (Andressa). Podemos mudar esse valor com var nome = "texto".</p>
+    <p>Podemos usar o node.js dentro do Visual Studio Code. Vamos em Terminal e depois Novo Terminal. Depois digitamos o node.</p>
+
+    <img src="node-visual.png" alt="node - visual" width="500px">
+
+    <p>Lemos variável idade rebece 18 no exemplo.</p>
+
+    <img src="node-visual-variaveis.png" alt="node-variaveis">
+
+    <p>Podemos sair do node usando .exit e depois do terminal usando .exit de novo ou só clicamos no x (cuidado para não abrir vários terminais, se abrimirmos vários só dá pra fechar com exit cada um). </p>
+
+    <p>Tem como somar as variáveis:</p>
+
+    <img src="soma.png" alt="soma">
+
+    <p><mark>Control + L</mark> = Limpa a tela</p>
+
+    <h2>Tipos de Variáveis</h2>
+
+    <p>Usamos variáveis para guardar dados de vários tipos diferentes: number (numéros inteiros e números reais - reais são ponto flutuante/ float. No javascript os dois são definidos como number); string (textos ou até mesmo conjunto de números como telefone, cpf, identidade - dentro de aspas); boolean (valores boleanos - só temos dois valores possíveis sendo verdadeiro ou falso).</p>
+    <img src="tipos-variaveis.png" alt="tipos" width="500px">
+
+    <p>Esses três são os tipos primitivos primordiais são chamados de <mark>Data Types</mark>. Porém no javascript há muitos outros tipos primitivos, ou esses valores tem valores internos:</p>
+    <img src="todos-tipos.png" alt="todos tipos" width="250px">
+
+    <p>Para eu saber/trabalhar com esse tipos temos um comando do javascript muito valioso: <mark>typeof</mark> (tipo de).</p>
+
+    <img src="tipo-node.png" alt="typeof">
+    
+    <p>Podemos fazer isso com um valor literal (literalmente um número):</p>
+
+    <img src="typeof-teste.png" alt="texte">
+
+    <p>Dica: seta pra cima ou pra baixo permite voltar no histórico.</p>
+
+    <script>
+        /*window.alert('Minha primeira mensagem!')
+        window.confirm('Está gostando de JS?')// com botão ok e cancelar
+        window.prompt('Qual é seu nome?') // vai perguntar o nome...*/
+    </script>
+</body>
+</html>

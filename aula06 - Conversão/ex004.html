@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatações</title>
+</head>
+<body>
+    <h1>Formatações strings</h1>
+
+    <img src="outras-formatacoes.png" alt="outros" width="500px">
+
+    <p>Para mostrar o resultado na tela usamos o document.write (), podemos usar tags html:</p>
+    <pre><code>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`&lt;h2&gt;Olá ${nome}. Seu nome tem ${nome.length} letras.&lt;/h2&gt;`)
+    </code></pre>
+    <p>Para quebrar a linha podemos usar o document.writeln <del>não funcionou com ln</del> ou a tag br dentro do valor. Em maiúsculo e minúsculo:</p>
+    <pre><code>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculo fica ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculo fica ${nome.toLowerCase()}`)
+    </code></pre>
+
+    <h2>Formatando números</h2>
+
+    <img src="form-num2.png" alt="formatações de números ensinadas nessa aula" width="500px">
+
+    <p>Podemos fazer o número ter 2 casas decimais:</p>
+    <img src="form-num-node.png" alt="teste">
+    <p>Podemos também trocar o ponto pela vírgula com o replace:</p>
+    <img src="ponto-por-virgula.png" alt="replace">
+    <p>Para transformar em reais:</p>
+    <img src="em-reais.png" alt="em reais"><br>
+
+    <a href="ex003.html">ex003 (voltar)</a>
+
+    <h2>Testes</h2>
+    <pre><code>
+        var salário = 1500.10
+        window.alert(`Seu salário será ${salário.toFixed(2).replace('.',',')}`)
+        document.write(`Seu salário é ${salário.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </code></pre>
+    <p>Aplicação:</p>
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculo fica ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculo fica ${nome.toLowerCase()}<br>`)
+        var salário = 1500.10
+        window.alert(`Seu salário será ${salário.toFixed(2).replace('.',',')}`)
+        document.write(`Seu salário é ${salário.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

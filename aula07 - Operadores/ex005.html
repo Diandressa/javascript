@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+
+    <!-- Estilo -->
+    <style>
+        span {
+            background-color: crimson;
+            color: rgb(212, 212, 212);
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores</h1>
+    <p>Existem algumas famílias de operadores:</p>
+    <img src="familias.png" alt="fami">
+
+    <h2>Operador Aritmético</h2>
+    <p>Temos os operadores aritméticos usados para cálculos:</p>
+    <img src="aritmetica.png" alt="aritmetica" width="300px">
+
+    <p>Esses são operadores binários, que precisam de dois operandos. Operandos são os números e operador o sinal. Usamos % para uma divisão inteira, ele é o operador de resto da divisão inteira. No exemplo acima 5/2 tem o resto 1, paramos antes de precisarmos inserir a vírgula. Lemos 5 por cento 2.</p>
+    <img src="resto.png" alt="resto" width="200px">
+    <p>O ** é o operador de potência.No exemplo acima seria 5<sup>2</sup>que equivale a 25.</p>
+
+    <h2>Ordem de precedência</h2>
+
+    <p><span>Cuidado!</span> Temos a chamada precedência de operadores:</p>
+    <img src="prec.png" alt="precedência" width="200px">
+
+    <p>Para mudar a ordem de precedência usamos os parênteses, assim como a matemática:</p>
+    <img src="prec2.png" alt="ordem de precedência" width="200px">
+
+    <p>A ordem de precedência no javascript é:</p>
+    <img src="prec3.png" alt="ordem">
+
+    <p>Na terceira linha temos o *, / e % que tem a mesma ordem de precedência. Se por acaso mais de um deles estiverem na mesma expressão usamos da esquerda pra direito, a ordem é de quem aparecer primeiro.</p>
+
+    <p>Para guardar os valores dessas expressões usamos o var <em>atributo</em>. No primeiro exemplo o resultado da expressão (8) fica guardado na memória. Dizemos que var a recebe 5 + 3.</p>
+    <img src="teste.png" alt="teste">
+
+    <h2>Auto-atribuições</h2>
+
+    <p>Temos as auto-atribuições, que são as atribuições da própria variável.</p>
+    <img src="auto.png" alt="auto">
+    <p>A primeira é uma atribuição simples, as outras são auto-atribuições. Meu n agora vale 7 e não mais 3. Isso é a auto-atribuição.</p>
+
+    <h2>Simplificar auto-atribuições</h2>
+
+    <p>Podemos simplificar as auto-atribuições da seguinte forma (só vale se n receber ELE MESMO):</p>
+    <img src="simplificando.png" alt="simplificando">
+    <p>Aplicação no node:</p>
+    <img src="simplificando-aplic.png" alt="aplicação">
+
+    <h2>Incremento</h2>
+
+    <p>Existe um simplificador ainda maior que é o operador de incremento.</p>
+
+    <p>Antes:</p>
+    <img src="simp.png" alt="simp">
+    <p>Depois:</p>
+    <img src="incremento2.png" alt="incremento">
+
+    <p>Aplicação no node (incrementa 1):</p>
+    <img src="pre-incremento.png" alt="incremento e pre-incremento">
+
+    <p>Aparece o valor não alterado porque o n vem antes do ++. Porém nas linguagens de programação tem como o ++ vir antes (seria um pré-incremento), como mostrado no final no node.</p>
+</body>
+</html>

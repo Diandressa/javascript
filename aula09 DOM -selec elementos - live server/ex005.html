@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando estudo com DOM</title>
+
+    <!-- Estilo -->
+    <style>
+        body {
+            background: rgb(59, 111, 180);
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #msg {
+            color: hotpink;
+        }
+
+        #msg2 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Extenções</h1>
+    <p>Instala as extenções LIVE SERVER e o Node.js exec.</p>
+    <p>Depois control + shift + p e digita live server. Dessa forma as alterações que faço no meu código aparecem automaticamente no navegador (Ir em file e deixar no Auto Save).</p>
+
+    <h1>Dom em Javascript</h1>
+
+    <p>DOM é um acronimo para Document Object Model (Modelo de Objetos para Documentos). Basicamente é um conjunto de objetos dentro do meu navegador que vai dar acesso aos componentes internos do meu website.</p>
+
+    <h2>Árvore DOM do meu site</h2>
+
+    <img src="arvore.png" alt="arvore" width="300px">
+
+    <p>Dentro do window tenho o objeto: location, que diz a localização do meu site/URL; o document que é o documento atual; e o history que é o nosso histórico de navegação. Quem ta em baixo são chamados filhos (children) e em cima são os pais/parentes (parents). Todos são chamados elementos.</p>
+    <p>No script selecionamos o que queremos com essa árvore. Ex: window.document</p>
+    <pre><code>
+        window.document.write(window.document.charset)
+    </code></pre>
+    <p>Podemos selecionar qualquer elemento para navegar na nossa árvore DOM. São cinco metodos de acesso:</p>
+    <img src="selecionando.png" alt="">
+
+    <h1>Marca</h1>
+    <p>Marca são as tags. Para selecionar por marca:</p>
+    <img src="marca.png" alt="" width="300px">
+    <pre><code>
+        var p1 = window.document.getElementsByTagName ('p')[0]
+        window.document.write('Está escrito assim:' + p1.innerText)
+    </code></pre>
+    <p>Seleciona vários elementos. No exemplo seleciona todos os paragráfos. Para escolher um parágrafo específico usamos o [0]. O número do parágrafo na ordem, começa do 0. A segunda linha é para escrever (write) na tela o texto que está dentro daquela variável (innerText-texto interno).</p>
+
+    <p>Com javascrip posso alterar determinado estilo. Primeiro criamos uma variável, dizendo que aquela variável irá receber determinada parte do meu documento. Depois selecionamos a variável, em seguida o estilo e depois a propriedade que queremos alterar:</p>
+    <pre><code>
+        var p1 = window.document.getElementsByTagName ('p')[0]
+        p1.style.color = 'pink'
+
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+    </code></pre>
+    Também podemos fazer dessa forma (diretamente selecionando os elementos da minha árvore DOM):
+    <pre><code>
+        window.document.body.style.background = 'black' (não funciona com head)
+    </code></pre>
+    <p>Podemos usar o innerHTML, que puxar todo o código, todas as tags. (Se uso só o innerText ele puxa só o texto, um strong nao irá ser replicado).</p>
+    <p>Texte: <strong>texto com strong</strong></p>
+    <pre><code>
+        var p10 = window.document.getElementsByTagName('p')[10]
+        document.write(p10.innerHTML)
+    </code></pre>
+    <p>Em um alert, ele vem mostrando a tag &lt;strong&gt;. No alert devemos usar o innerText para pegar o texto sem a formatação.</p>
+
+    <h1>ID</h1>
+    <p>Podemos selecionar pelo Id também (como é singular, uma seleção específica, não precisamos de colchetes):</p>
+    <div id="msg">Teste em divs</div>
+    <img src="id.png" alt="" width="300px">
+    <pre><code>
+        var IDmsg = window.document.getElementById('msg')
+        IDmsg.style.background = 'white'
+        IDmsg.innerText = 'Olá amigo'
+    </code></pre>
+    <p>Podemos alterar o texto com innerText.</p>
+    <p>O comando completo seria:</p>
+    <pre><code>
+        window.document.getElementById('msg').innerText = 'Olá amigo'
+    </code></pre>
+
+    <h1>Nome/name</h1>
+
+    <p>Quando usamos name podemos selecionar o objeto pelo nome (usamos o colchete para selecionar o nome que queremos, como o elements está no plural, irá selecionar vários elementos, precisamos específicar qual queremos). Só em tags name:</p>
+    <div name="msg2">Teste em divs 2</div>
+    <img src="name.png" alt="" width="300px">
+    <pre><code>
+        var msg2name = document.getElementsByName('msg2')[0]
+        msg2name.innerHTML = 'Olá parceiro' 
+    </code></pre>
+
+    <p>Lembrando que o getElementsByTagName() seleciona pela Tag (Marca).</p>
+
+    <h1>Classe</h1>
+    <p>Por class:</p>
+    <img src="classe.png" alt="" width="300px">
+
+    <h1>Seletor</h1>
+
+    <p>Podemos usar, e é até recomendável, usar o seletor no lugar dos outros vistos acima:</p>
+    <img src="seletor.png" alt="">
+    <pre><code>
+        var msg = window.document.querySelector('div#msg')
+    </code></pre>
+    <p>Para minha div com id msg. (Se for class usamos o ponto = .).</p>
+
+    <script>
+
+        window.document.write(window.document.charset + '<br>')
+        var p1 = window.document.getElementsByTagName ('p')[0]
+        window.document.write('Está escrito assim (no parágrafo 0): ' + p1.innerText + '<br>') 
+
+        var corpo = window.document.body
+        corpo.style.background = '#111'
+
+        var p10 = window.document.getElementsByTagName('p')[10]
+        document.write(p10.innerHTML)
+
+        //window.alert(p10.innerHTML)
+
+        /*var IDmsg = window.document.getElementById('msg')
+        IDmsg.style.background = 'white'
+        IDmsg.innerText = 'Olá amigo'*/
+
+        var msg2name = document.getElementsByName('msg2')[0]
+        msg2name.innerHTML = 'Olá parceiro'
+
+        /*var d = document.querySelector("div")
+        window.alert(d.innerHTML)*/
+
+        /*var msg = window.document.querySelector('div#msg')
+        msg.style.background = 'blue'*/
+    </script>
+</body>
+</html>

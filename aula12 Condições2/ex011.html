@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições 2</title>
+    <style>
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Condições 02</h1>
+    <h2>Condições Aninhadas</h2>
+    <p>Pegamos uma condição composta e colocamos mais condições dentro dela. Se for verdade segue um caminho, se não vai pra outra condição.</p>
+    <img src="condiçoes-aninhadas.png" alt="">
+    <p>Se atender a condição 1 o bloco1 irá acontecer, se não ele irá fazer outra condição. Observe que só executa o bloco2 se a primeira for falsa. Então no final fica: se a condição um for falsa, se a condição dois for falsa, então irá atender a condição 3.</p>
+    <img src="condiçoes-aninhadas2.png" alt="">
+    <p>Exemplo:</p>
+    <img src="exemplo011.png" alt="">
+
+    <h2>Condição Múltipla</h2>
+    <p>A condição múltipla serve para valores fixos.</p>
+    <img src="condição-multipla.png" alt="">
+    <p>O comando switch não é um condição, é uma expressão.</p>
+    <img src="switch.png" alt="" width="300px">
+    <p>O <strong>default</strong> é como se fosse o else, se não for nenhum dos valores dos case então ele aplica o default. <mark>IMPORTANTE</mark>: dentro dessa estrutura preciso colocar o break no final de cada case.</p>
+    <p>Se a expressão resultar no valor 2 então irá ser executado os comandos que estiverem nesse case. No final ele bate no break e é desviado lá pra baixo.</p>
+    <img src="break.png" alt="" width="300px">
+    <p>No exemplo abaixo usamos o switch em vez de if (diaSem == 0){}. Se usassemos o if o código ia ficar muito grande e iria dar mais trabalho pra digitar, por isso em casos como esse podemos usar o switch.</p>
+    <img src="switch2.png" alt=""><br>
+    <img src="switch3.png" alt="">
+    <p>Sem o break ele escreve do número escolhido em diante (hoje aqui é domingo, 0):</p>
+    <img src="sem-break.png" alt="">
+    <p>Se precisarmos usar intervalos de valores, é muito masi interessante usar os <mark>if</mark>. O switch é bom para testar valores pontuais, específicos (Funciona com strings também. Ex: case 'texto').</p>
+
+    <h2>Receber hora atual no Javascript</h2>
+    <p>Podemos pegar a hora/ dias/anos/ etc do sistema que ta rodando. (No caso pra hora usamos <strong>getHours( )</strong> )</p>
+    <img src="hora-atual.png" alt="">
+    <p>Dias da semana - ordem:</p>
+    <img src="dias-atual.png" alt="">
+    <p>Conselho: Logo após escrever o código no Visual Code, apertem "Alt+Shift+F". Isso vai deixar o código arrumadinho</p>
+</body>
+</html>

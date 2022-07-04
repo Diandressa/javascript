@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Compostas</title>
+    <style>
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variáveis Compostas/Arrays</h1>
+    <img src="definicao.png" alt="">
+    <p>Criar várias variáveis não é prático e precisamos escrever muito. Por isso usamos as variáveis compostas.</p>
+    <p>Usando várias variáveis simples:</p>
+    <img src="simples.png" alt="" width="600">
+    <p>Já usando as variáveis compostas podemos chamar um conjunto de variáveis por um nome só, colocamos um indentificador de índice/chave para encontrar eterminada variável. Para declaramos uma variável composta em javascript usamos var a = [].</p>
+    <img src="composta.png" alt="" width="600">
+    <p>Cada espaço para variável recebe um número (chave/key/indice)</p>
+    <img src="chave.png" alt="" width="500">
+    <p>Uma variável do tipo composta é chamada de array ou vetor. Um vetor é composto de elementos, é um par que agrupa espaço da memória, o valor colocado dentre dele e o índice. Cada elemento possui se valor e sua chave de identificação.</p>
+    <img src="estrutura.png" alt="" width="500px">
+    <p>Exemplo:</p>
+    <img src="exemplo.png" alt="" width="500px">
+    <p>Podemos acrescentar valores usamos o nome da variável composta, a chave/indice(entre colchetes) e o valor que ele irá receber.</p>
+    <img src="acrescentando.png" alt="" width="500px">
+    <p>Se queremos colocar/inserir um valor na última posição usamos o var.push(valor).</p>
+    <img src="push.png" alt="" width="500px"><br>
+    <img src="push2.png" alt="">
+    <p>Se eu coloco o push embaixo do sort ele vai primeiro organizar os valores e depois colocar o o valor de push (1) no final.</p>
+    <img src="push3.png" alt="">
+    <p>Para saber o comprimento dele usamos o length(em javascript o length é um atributo). Diz quantos elementos/casas tem um array.</p>
+    <img src="length.png" alt="" width="500px"><br>
+    <img src="length2.png" alt="">
+    <p>Podemos mostrar a posição isoladamente.</p>
+    <img src="posição.png" alt="">
+    <p>Temos o método .sort() que coloca meus elementos em ordem crescente. Sort é um método interno de todo elemento que é um vetor.</p>
+    <img src="sort.png" alt="" width="500px"><br>
+    <img src="sort2.png" alt="">
+    <p>Podemos mostrar um vetor na tela sem a formatação padrão (com colchetes).</p>
+    <p>Para mostrar cada posição (assim nosso código não está prático na digitação):</p>
+    <img src="posições.png" alt="" width="400">
+    <p>Podemos usar a estrutura de repetição, assim nosso código fica menor:</p>
+    <p>No for primeiro colocamos a inicialização, depois o teste lógico, e por último o incremento. O tste lógico colocamos 'pos' menor que num.length (enquanto o pos não chegar no final do meu vetor, enquanto for menor que todos os elementos do meu vetor, que é o comprimento/tamanho dele).</p>
+    <img src="for.png" alt="" width="500px">
+    <p>Formas de mostrar os vetores na tela (a segunda forma não é recomendada, pois não é prática):</p>
+    <img src="vetortela.png" alt="">
+    <p>Chamamos esse processo de percusso para exibição no vetor. Ainda temos um jeito (novo) mais simples utilizando o for com in, veremos a seguir. Esse for tem somente dois elementos (ele é otimizado e só funciona em variáveis compostas e objetos), o primeiro elemento colocamos a variável do meu índice/chave (posição), no segundo elemento colocamos o nome da variável composta(do vetor). Então lê-se: para cada posição(pos) dentro(in=dentro ou em) do meu vetor, eu vou mostrar o vetor[pos] (que é cada posição naquele vetor).</p>
+    <img src="in.png" alt="" width="400px"><br>
+    <img src="in-exem.png" alt="">
+    <p>Para buscar valores dentro de um vetor usamos o método indexOf(valor). Ele busca pelo valor e retorna a chave. Se eu colocar um valor que não existe ele retorna -1.</p>
+    <img src="indexOf.png" alt="">
+    <p>Quando usamos o sort ele da a posição coforme aparece no sort, veja:</p>
+    <img src="indexOf-exem.png" alt="">
+    <p>Exemplo para valores não encontrados:</p>
+    <img src="usando-if.png" alt="">
+</body>
+</html>
